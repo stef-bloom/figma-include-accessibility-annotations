@@ -26,14 +26,12 @@ const Semantics = () => {
   const { removeNodes, sendToFigma, updateState, zoomTo } = cnxt;
 
   const semanticTypes =
-    pageType === 'web' ? semanticTypesWeb : semanticTypesNative;
+pageType === 'web' ? semanticTypesWeb : semanticTypesNative;
   const semanticTypesArray = Object.keys(semanticTypes);
-  // const semanticsOnlyOnce = ['main', 'banner', 'content-info'];
 
   // ui state
   const routeName = 'Semantics';
   const semanticsArray = Object.keys(semantics);
-  // const semanticsValue = Object.values(semantics);
   const semanticsAreSet = semanticsArray.length !== 0;
 
   // state defaults
@@ -185,7 +183,6 @@ const Semantics = () => {
     if (semanticsAreSet || noSemantics) {
       return {
         completesStep: true,
-        // isDisabled: showInfo,
         onClick: onDoneWithSemantics
       };
     }
