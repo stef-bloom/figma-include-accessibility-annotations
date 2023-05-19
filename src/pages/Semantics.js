@@ -4,7 +4,6 @@ import * as React from 'react';
 import {
   Alert,
   AnnotationStepPage,
-  scrollToBottomOfAnnotationStep,
   EmptyStepSelection,
   HeadingStep
 } from '../components';
@@ -46,9 +45,6 @@ pageType === 'web' ? semanticTypesWeb : semanticTypesNative;
 
   const onAddSemantic = (semanticType) => {
     const { bounds, id } = page;
-
-    // scroll to bottom of main
-    scrollToBottomOfAnnotationStep();
 
     // let figma side know, time to place that rectangle
     sendToFigma('add-semantic', {
