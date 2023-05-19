@@ -14,6 +14,7 @@ export { default as SvgFocusGroup } from './SvgFocusGroup';
 export { default as SvgFrame } from './SvgFrame';
 export { default as SvgInfo } from './SvgInfo';
 export { default as SvgInfoFill } from './SvgInfoFill';
+export { default as SvgLabel } from './SvgLabel';
 export { default as SvgLoadingSpinner } from './SvgLoadingSpinner';
 export { default as SvgMobile } from './SvgMobile';
 export { default as SvgText } from './SvgText';

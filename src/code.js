@@ -173,6 +173,26 @@ figma.ui.onmessage = async (msg) => {
       step.semantics.updateWithLabel(msg);
   }
 
+  // no aria labels checked
+  if (type === 'no-arialabel') {
+    step.arialabels.noArialabels(msg);
+  }
+
+  // add arialabel to frame
+  if (type === 'add-arialabel') {
+    step.arialabels.add(msg);
+  }
+
+  // aria labels completed (annotation placement)
+  if (type === 'completed-arialabel') {
+    step.arialabels.completed(msg);
+  }
+
+  // arialabel update with label
+  if (type === 'update-arialabel-label') {
+    step.arialabels.updateWithLabel(msg);
+  }
+
   // add reading order arrow
   if (type === 'add-reading-order-arrow') {
     step.readingOrder.addArrow(msg);

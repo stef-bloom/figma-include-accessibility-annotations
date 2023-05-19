@@ -32,6 +32,9 @@ export default React.createContext({
   // semantics
   semantics: {},
 
+  // aria labels
+  arialabels: {},
+
   // alt text
   noImages: false,
   imagesData: [],

@@ -26,6 +26,7 @@
         "Landmarks": { "id": "251:298" },
         "Headings": { "id": "254:198" },
         "Semantics": { "id": "254:191" },
+        "Arialabels": { "id": "254:196" },
         "Contrast": { "id": "244:195" },
         "Responsive reflow": { "id": "244:192" },
         "Text zoom": { "id": "244:193" },
@@ -59,6 +60,13 @@
       "id": "254:306",
       "name": "semantic: checkbox | 254:306",
       "type": "checkbox"
+    }
+  },
+  "arialabels": {
+    "254:706": {
+      "id": "254:706",
+      "name": "arialabel: arialabel | 254:706",
+      "type": "arialabel"
     }
   },
   "imagesData": [

@@ -38,6 +38,9 @@
     "Semantics": {
       "text": "Provide useful additional semantics that browsers and assistive technologies can recognize, and let users know what is going on."
     },
+    "Arialabels": {
+      "text": "If the default accessible name is not appropriate, use the aria-label attribute to define the accessible name of an element. aria-label is only supported on interactive elements, widgets, landmarks, images and iframes. The max character limit is 125."
+    },
     "Reading order": {
       "text": "Draw a path to reflect the desired order of consuming content. Typically, it follows the visual layout of the content—left-to-right, top-to-bottom (for LTR languages)."
     },

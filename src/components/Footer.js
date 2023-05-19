@@ -60,6 +60,8 @@ const Footer = ({ primaryAction, secondaryAction, routeName }) => {
 
     updateState('semantics', {});
 
+    updateState('arialabels', {});
+
     updateState('imagesData', []);
     updateState('imagesScanned', []);
 

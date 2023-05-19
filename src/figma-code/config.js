@@ -11,6 +11,7 @@ export default {
     'Landmarks Layer',
     'Headings Layer',
     'Semantics Layer',
+    'Arialabels Layer',
     'Reading order Layer',
     'Alt text Layer',
     'Contrast Layer',

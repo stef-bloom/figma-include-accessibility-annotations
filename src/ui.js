@@ -14,6 +14,7 @@ import SelectFrameToStart from './pages/SelectFrameToStart';
 import Landmarks from './pages/Landmarks';
 import Headings from './pages/Headings';
 import Semantics from './pages/Semantics';
+import Arialabels from './pages/AriaLabels';
 import ReadingOrder from './pages/ReadingOrder';
 import AltText from './pages/AltText';
 import Contrast from './pages/Contrast';
@@ -151,8 +152,9 @@ const App = () => {
               <React.Fragment>
                 <Route path="/" element={<Landmarks />} />
                 <Route path="headings" element={<Headings />} />
-                <Route path="semantics" element={<Semantics />} />
                 <Route path="reading-order" element={<ReadingOrder />} />
+                <Route path="semantics" element={<Semantics />} />
+                <Route path="arialabels" element={<Arialabels />} />
                 <Route path="alt-text" element={<AltText />} />
                 <Route path="contrast" element={<Contrast />} />
                 <Route path="touch-target" element={<TouchTarget />} />

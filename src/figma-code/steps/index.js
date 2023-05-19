@@ -5,6 +5,7 @@ import complexGestures from './complex-gestures';
 import focusGrouping from './focus-grouping';
 import headings from './headings';
 import semantics from './semantics';
+import arialabels from './arialabels';
 import landmarks from './landmarks';
 import readingOrder from './reading-order';
 import textZoom from './text-zoom';
@@ -17,6 +18,7 @@ export default {
   focusGrouping,
   headings,
   semantics,
+  arialabels,
   landmarks,
   readingOrder,
   textZoom

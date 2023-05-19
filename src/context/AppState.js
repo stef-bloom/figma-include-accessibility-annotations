@@ -64,6 +64,9 @@ class AppState extends React.Component {
       // semantics
       semantics: {},
 
+      // arialabels
+      arialabels: {},
+
       // alt text
       noImages: false,
       imagesData: [],
@@ -297,6 +300,22 @@ class AppState extends React.Component {
         });
         break;
 
+      // aria label confirmed (arialabels)
+      case 'arialabel-confirmed':
+        const { arialabels } = this.state;
+        const { arialabelId, arialabelType, arialabelName } = data;
+        const newArialabelEntry = {
+          id: arialabelId,
+          label: null,
+          name: arialabelName,
+          type: arialabelType
+        };
+        const newArialabelsObj = { ...arialabels, [arialabelId]: newArialabelEntry };
+        this.setState({
+          arialabels: newArialabelsObj
+        });
+        break;
+
       // no need for this yet, but a msg hook is here
       case 'selection-change':
         break;
@@ -343,6 +362,9 @@ class AppState extends React.Component {
 
     // semantics
     const { semantics } = this.state;
+
+    // arialabels
+    const { arialabels } = this.state;
 
     // alt text
     const { noImages, imagesData, imagesScanned } = this.state;
@@ -392,6 +414,9 @@ class AppState extends React.Component {
 
           // semantics
           semantics,
+
+          // arialabels
+          arialabels,
 
           // alt text
           noImages,

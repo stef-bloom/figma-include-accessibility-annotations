@@ -50,6 +50,9 @@ const isA11yLayer = (children, childNode, name) => {
     // no layers?
     if (hasLayer.length === 0) {
       if (frameChild?.id !== existingAnnotationsFrame?.id) {
+        console.log('frameChild?.id: '+frameChild?.id);
+        console.log('existingAnnotationsFrame?.id: '+existingAnnotationsFrame?.id);
+        
         // eslint-disable-next-line no-console
         console.error(`no steps found in "${stepName}"`);
       }
@@ -166,7 +169,37 @@ const isA11yLayer = (children, childNode, name) => {
         };
         a11yCompletedLayers.push(stepName);
       }
-      
+      else if (stepName === 'Arialabels') {
+        // get arialabel nodes and format
+        const arialabels = {};
+        for (let l = 0; l < frameChild.children.length; l += 1) {
+          const arialabelObj = frameChild.children[l];
+  
+          // make sure it's a frame node OR group node (backwards compatibility)
+          if (arialabelObj.type === 'FRAME' || arialabelObj.type === 'GROUP') {
+            const [nameArray] = arialabelObj.name.split('|');
+            const typeName = nameArray.replace('Arialabel: ', '');
+  
+            // if we have a label, grab it
+            const [type, label = null] = typeName.split(':');
+  
+            arialabels[arialabelObj.id] = {
+              id: arialabelObj.id,
+              label: label !== null ? label.trim() : label,
+              name: arialabelObj.name,
+              type: type.trim()
+            };
+          }
+        }
+  
+        stepsData[stepName] = {
+          id: frameChild.id,
+          existingData: arialabels,
+          stateKey: 'arialabels',
+          visible: frameChild.visible
+        };
+        a11yCompletedLayers.push(stepName);
+      } 
       
       else if (stepName === 'Reading order') {
       // set Reading order as completed if exists

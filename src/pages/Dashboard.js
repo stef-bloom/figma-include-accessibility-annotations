@@ -69,6 +69,7 @@ const Dashboard = () => {
     updateState('landmarks', {});
     updateState('headings', {});
     updateState('semantics', {});
+    updateState('arialabels', {});
     updateState('imagesData', []);
     updateState('imagesScanned', imagesScanned);
 

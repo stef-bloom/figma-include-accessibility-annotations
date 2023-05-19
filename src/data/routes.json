@@ -21,7 +21,15 @@
     "designerCheck": "Semantics",
     "path": "semantics",
     "shouldHide": true,
-    "percent": 8
+    "percent": 4
+  },
+  "Arialabels": {
+    "id": "Arialabels",
+    "label": "Aria labels",
+    "designerCheck": "Arialabels",
+    "path": "arialabels",
+    "shouldHide": true,
+    "percent": 4
   },
   "Reading order": {
     "id": "Reading order",
