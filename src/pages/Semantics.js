@@ -223,9 +223,9 @@ pageType === 'web' ? semanticTypesWeb : semanticTypesNative;
                   : '';
 
               return (
-                <div key={key} className="row-semantic flex-row-space-between">
+                <div key={key} className="row-label flex-row-space-between">
                   <div className="flex-row-center">
-                    <div className="semantic-type">{`${type}`}</div>
+                    <div className="label">{`${type}`}</div>
 
                     {showLabel && (
                       <React.Fragment>
